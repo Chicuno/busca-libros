@@ -16,15 +16,15 @@ Al iniciar el programa te da la bienvenida y te da opciones para
 
 El programa incluye validaciones en cada una de las entradas del usuario para evitar que se ingresen caracteres no válidos 
 según lo requiera el caso y evitar entradas vacías. Todas con sus respectivos mensajes. Normalización de las entradas para aceptar palabras con o sin acento, 
-mayúsculas o minúsculas "n" o "ñ", así como aceptar el idioma buscado por su nombre en español, convirtiéndolo a su código de idioma 
+mayúsculas o minúsculas, "n" o "ñ", así como aceptar el idioma buscado por su nombre en español, convirtiéndolo a su código de idioma 
 para su búsqueda en la base de datos, así como la conversión de código de idioma a nombre en español para listar los libros, complementando con 
-el mapeo para latín, que no está incluído en los idiomas que maneja Java. También se normalizan los nombres de los autores para mostrar el nombre primero y
+el mapeo para latín y otros idiomas que no están incluído en los que maneja Java. También se normalizan los nombres de los autores para mostrar el nombre primero y
 después el apellido, ya que la respuesta de la api es primero apellido, luego nombre. También se codifican los caracteres especiales para evitar errores en
 la búsqueda que se envía a la API en el caso de que el usuario los use.
 
-En las opciones donde se pregunta otro dato para buscar, se tiene la opción de seguir buscando o regresar al menú principal.
+En las opciones donde se pregunta si se quier buscar otro dato como otro libro u otro año, se tiene la opción de seguir buscando o regresar al menú principal.
 
-En la opción de buscar para ingresar un libro a la base de datos, si los resultados son más de 32, se muestran 32 y se ofrece al usuario la opción de refinar los
+En la opción de buscar para ingresar un libro a la base de datos, si los resultados son más de 32, se muestran los primeros 32 y se ofrece al usuario la opción de refinar los
 resultados agregando palabras a la búsqueda. Si el libro que se selecciona ya está en la base de datos, no se permite volverlo a guardar, igualmente, si ya se tiene
 guardado un autor y se guarda otro libro del mismo, no se guarda duplicado, sino que se relaciona el mismo con el nuevo libro. Después se ofrece la opción para
 guardar otro libro de la lista de resultados o regresar a buscar otro. <br> <br>
