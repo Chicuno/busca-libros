@@ -1,9 +1,8 @@
-package com.fernandez.literalura;
+package com.fernandez.literalura.servicio;
 
 import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fernandez.literalura.modelos.DatosLibro;
-import com.fernandez.literalura.modelos.Libro;
 
 import java.util.List;
 

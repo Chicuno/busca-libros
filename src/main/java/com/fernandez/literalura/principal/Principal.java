@@ -2,7 +2,7 @@ package com.fernandez.literalura.principal;
 
 import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fernandez.literalura.RespuestaConvertida;
+import com.fernandez.literalura.servicio.RespuestaConvertida;
 import com.fernandez.literalura.modelos.Autor;
 import com.fernandez.literalura.modelos.DatosLibro;
 import com.fernandez.literalura.modelos.Libro;
