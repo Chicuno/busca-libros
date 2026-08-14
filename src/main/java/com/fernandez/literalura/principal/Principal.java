@@ -128,7 +128,7 @@ public class Principal {
 
                     String numero = String.valueOf(respuestaConvertida.resultados().indexOf(libro) + 1);
 
-                    System.out.printf("| %-5s | %-80s | %-30s | %-15s | %-9s |%n", numero, libro.titulo(), nombreAutor, idiomas, libro.numeroDeDescargas());
+                    System.out.printf("| %-5s | %-80s | %-30s | %-15s | %-9s |%n", numero, truncar(libro.titulo(), 80), truncar(nombreAutor, 30), idiomas, libro.numeroDeDescargas());
                 }
                 System.out.println(ConsolaColor.VERDE + "\nIngresa el número del libro que quieres guardar.      o 0 para volver a buscar" + ConsolaColor.AZUL);
 
@@ -213,7 +213,7 @@ public class Principal {
                     .map(this::obtenerNombreIdioma)
                     .collect(Collectors.joining(", "));
 
-            System.out.printf("| %-80s | %-30s | %-15s | %-9s |%n", libro.getTitulo(), nombreAutor, idiomas, libro.getNumeroDeDescargas());
+            System.out.printf("| %-80s | %-30s | %-15s | %-9s |%n", truncar(libro.getTitulo(), 80), truncar(nombreAutor, 30), idiomas, libro.getNumeroDeDescargas());
         }
 
 
@@ -352,7 +352,7 @@ public class Principal {
                     String idiomas = libro.getIdiomas().stream()
                             .map(this::obtenerNombreIdioma)
                             .collect(Collectors.joining(", "));
-                    System.out.printf("| %-80s | %-30s | %-15s | %-9s |%n", libro.getTitulo(), nombreNormalizado, idiomas, libro.getNumeroDeDescargas());
+                    System.out.printf("| %-80s | %-30s | %-15s | %-9s |%n", truncar(libro.getTitulo(),80), truncar(nombreNormalizado,30), idiomas, libro.getNumeroDeDescargas());
                 }
                 System.out.println(ConsolaColor.VERDE +"\n¿Otro idioma?      " + "Salir de idiomas: 0" + ConsolaColor.AZUL);
             } catch (NumberFormatException e) {
@@ -424,6 +424,12 @@ public class Principal {
     public record CantidadDeResultados(
             @JsonAlias("count") int cantidadDeResultados
     ){}
+
+    private static String truncar(String texto, int longitud) {
+        if (texto == null) return "";
+        if (texto.length() <= longitud) return texto;
+        return texto.substring(0, longitud - 3) + "...";
+    }
 }
 
 
