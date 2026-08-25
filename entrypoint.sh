@@ -8,8 +8,8 @@ PUERTO="${PORT:-7681}"
 while true; do
   echo "[log] Iniciando nueva sesión de literalura en puerto $PUERTO..."
   ttyd -p "$PUERTO" -W -o sh -c '
-    echo "Cargando literalura, un momento...";
-    ( sleep 6; clear ) &
+    echo "Cargando Busca Libros, un momento...";
+    ( sleep 2; clear) &
     java -jar /app/app.jar --spring.profiles.active=demo
   ' &
   PID=$!
