@@ -19,6 +19,6 @@ COPY --from=build /build/target/literalura-0.0.1-SNAPSHOT.jar app.jar
 COPY entrypoint.sh /app/entrypoint.sh
 RUN sed -i 's/\r$//' /app/entrypoint.sh && chmod +x /app/entrypoint.sh
 
-EXPOSE 7681
+EXPOSE 8000
 
 ENTRYPOINT ["/app/entrypoint.sh"]
