@@ -13,7 +13,7 @@ while true; do
   
   # Ejecutamos ttyd en segundo plano
   ttyd -p "$PUERTO" -W -o sh -c '
-    echo "Cargando Busca Libros, un momento...";
+    echo "Cargando Busca Libros, por favor espera unos segundos...";
     ( sleep 2; clear) &
     java -jar /app/app.jar --spring.profiles.active=demo
   ' &
