@@ -4,7 +4,7 @@
 
 Aplicación de consola (CLI) desarrollada en Java con Spring Boot como reto literalura en mis estudios en Alura Latam.<br><br>
 
-<h1> Pruébalo: </h1> https://busca-libros-ant.hostless.app/ <h2> Busca un libro y agrégalo a la base de datos, entra a listar libros registrados y ahí estará. </h2>
+<h1> Pruébalo: </h1> https://busca-libros-app.hostless.app/ <h2> Busca un libro y agrégalo a la base de datos, entra a listar libros registrados y ahí estará. </h2>
 
 La demo corre en un contenedor que expone la consola directamente en el navegador como si estuvieras en tu propia terminal. Usa una base de datos en memoria (H2) precargada con una muestra de libros. Los datos se reinician automáticamente en cada nueva sesión.
 
