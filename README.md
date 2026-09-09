@@ -145,7 +145,7 @@ El proyecto incluye un `Dockerfile` multi-stage que compila la app y la expone c
 
 ```bash
 docker build -t literalura-demo .
-docker run -p 7681:7681 literalura-demo
+docker run -p 7681:8000 literalura-demo
 ```
 
 Abre `http://localhost:7681` en tu navegador para interactuar con la app.
